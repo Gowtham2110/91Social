@@ -1,6 +1,8 @@
 package main.model.frame;
 
-public class Frame {
+import main.model.Components;
+
+public class Frame implements Components {
 	
 	private FrameComponent topTube;
 	private FrameComponent downTube;
@@ -38,6 +40,4 @@ public class Frame {
 	public void setChainStay(FrameComponent chainStay) {
 		this.chainStay = chainStay;
 	}
-	
-	
 }

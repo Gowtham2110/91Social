@@ -1,8 +1,9 @@
 package main.model.seating;
 
 import main.model.ComponentPart;
+import main.model.Components;
 
-public class Seating {
+public class Seating implements Components {
 	
 	private ComponentPart saddle;
 	private ComponentPart seatPost;
@@ -19,6 +20,4 @@ public class Seating {
 	public void setSeatPost(ComponentPart seatPost) {
 		this.seatPost = seatPost;
 	}
-
-	
 }

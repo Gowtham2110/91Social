@@ -2,20 +2,31 @@ package main.model;
 
 public class ComponentPart {
 	
-	private String company;
-	private MetalType metalType;
+	private CycleParts componentName;
+	private Integer noOfComponents;
+		
+	public ComponentPart() {
+		
+	}
 	
-	public String getCompany() {
-		return company;
+	public ComponentPart(CycleParts name, Integer noOfComponents) {
+		this.componentName = name;
+		this.noOfComponents = noOfComponents;
 	}
-	public void setCompany(String company) {
-		this.company = company;
+	
+	public CycleParts getComponentName() {
+		return componentName;
 	}
-	public MetalType getMetalType() {
-		return metalType;
+	public void setComponentName(CycleParts componentName) {
+		this.componentName = componentName;
 	}
-	public void setMetalType(MetalType metalType) {
-		this.metalType = metalType;
+	public Integer getNoOfComponents() {
+		return noOfComponents;
 	}
+	public void setNoOfComponents(Integer noOfComponents) {
+		this.noOfComponents = noOfComponents;
+	}
+	
+	
 	
 }

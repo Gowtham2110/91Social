@@ -1,8 +1,9 @@
 package main.model.handleBarComponents;
 
 import main.model.ComponentPart;
+import main.model.Components;
 
-public class HandleBarComponents {
+public class HandleBarComponents implements Components {
 	
 	private ComponentPart handleBarGrip;
 	private ComponentPart headTube;
@@ -47,6 +48,4 @@ public class HandleBarComponents {
 	public void setGearControl(ComponentPart gearControl) {
 		this.gearControl = gearControl;
 	}
-	
-	
 }

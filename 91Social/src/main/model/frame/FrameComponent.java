@@ -6,6 +6,16 @@ public class FrameComponent {
 	
 	private Double frameLength;
 	private ComponentPart component;
+	
+	public FrameComponent() {
+		
+	}
+	
+	public FrameComponent(Double length, ComponentPart component) {
+		this.frameLength = length;
+		this.component = component;
+	}
+	
 	public Double getFrameLength() {
 		return frameLength;
 	}
@@ -17,8 +27,5 @@ public class FrameComponent {
 	}
 	public void setComponent(ComponentPart component) {
 		this.component = component;
-	}
-	
-	
-	
+	}	
 }

@@ -1,13 +1,14 @@
 package main.model.chainAssembly;
 
 import main.model.ComponentPart;
+import main.model.Components;
 
-public class ChainAssembly {
+public class ChainAssembly implements Components {
 	
 	private ComponentPart pedal;
 	private ComponentPart crankArm;
 	private ComponentPart chain;
-	private Gear gear;
+	private ComponentPart gear;
 	
 	public ComponentPart getPedal() {
 		return pedal;
@@ -27,12 +28,10 @@ public class ChainAssembly {
 	public void setChain(ComponentPart chain) {
 		this.chain = chain;
 	}
-	public Gear getGear() {
+	public ComponentPart getGear() {
 		return gear;
 	}
-	public void setGear(Gear gear) {
+	public void setGear(ComponentPart gear) {
 		this.gear = gear;
 	}
-	
-	
 }

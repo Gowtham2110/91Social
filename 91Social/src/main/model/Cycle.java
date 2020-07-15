@@ -6,13 +6,14 @@ import main.model.frame.Frame;
 import main.model.handleBarComponents.HandleBarComponents;
 import main.model.seating.Seating;
 
-public class Cycle {
+public class Cycle implements Components {
 	
 	private Wheel wheel;
 	private ChainAssembly chainAssembly;
 	private Frame frame;
 	private HandleBarComponents handleBarComponents;
 	private Seating seating;
+	
 	public Wheel getWheel() {
 		return wheel;
 	}

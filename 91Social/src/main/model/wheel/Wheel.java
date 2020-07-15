@@ -1,19 +1,20 @@
 package main.model.wheel;
 
 import main.model.ComponentPart;
+import main.model.Components;
 
-public class Wheel {
+public class Wheel implements Components {
 	
-	private Spokes spokes;
+	private ComponentPart spokes;
 	private ComponentPart rim;
-	private Tube tube;
+	private ComponentPart tube;
 	private ComponentPart tyre;
 	private ComponentPart valve;
 	
-	public Spokes getSpokes() {
+	public ComponentPart getSpokes() {
 		return spokes;
 	}
-	public void setSpokes(Spokes spokes) {
+	public void setSpokes(ComponentPart spokes) {
 		this.spokes = spokes;
 	}
 	public ComponentPart getRim() {
@@ -22,10 +23,11 @@ public class Wheel {
 	public void setRim(ComponentPart rim) {
 		this.rim = rim;
 	}
-	public Tube getTube() {
+	
+	public ComponentPart getTube() {
 		return tube;
 	}
-	public void setTube(Tube tube) {
+	public void setTube(ComponentPart tube) {
 		this.tube = tube;
 	}
 	public ComponentPart getTyre() {
@@ -40,6 +42,4 @@ public class Wheel {
 	public void setValve(ComponentPart valve) {
 		this.valve = valve;
 	}
-
-	
 }
