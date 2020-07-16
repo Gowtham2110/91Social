@@ -40,7 +40,7 @@ public class BlockingQueueTest {
 			return;
 		}
 				
-		int count = 2;
+		int count = 100;
 				
 		Producer producer1 = new Producer(sharedQueue, blockingQueueArguments, count);
 		Thread producerThread1 = new Thread(producer1);
