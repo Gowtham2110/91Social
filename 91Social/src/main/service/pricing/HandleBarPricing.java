@@ -1,6 +1,8 @@
 package main.service.pricing;
 
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import main.model.ComponentPart;
 import main.model.Components;
@@ -8,9 +10,12 @@ import main.model.handleBarComponents.HandleBarComponents;
 
 public class HandleBarPricing extends PricingService {
 
+	private final static Logger LOGGER = Logger.getLogger(ChainPricing.class.getName());
+	
 	@Override
 	public Double getPricing(Components components) {
 		LocalDate today = LocalDate.now();
+		LOGGER.log(Level.INFO, "Date Parameter is not Passed. Setting it to current date");
 		return getPricingBasedOnDate(components, today);
 	}
 
@@ -49,6 +54,7 @@ public class HandleBarPricing extends PricingService {
 			finalPrice += getComponentCost(shockAbsorber);
 		}
 		
+		LOGGER.log(Level.INFO, "Caluculating final price of Handle Bar Components based on date.");
 		finalPrice = calculatePricingBasedOnDate(finalPrice, date);
 		return finalPrice;
 	}

@@ -6,7 +6,6 @@ public class Prices {
 	
 //	PRICING WILL BE FETCHED FROM DB IN REAL SCENARIO 
 //	THESE PRICING ARE VALID AS ON 01 JAN, 2020
-	
 	private LocalDate pricingDate = LocalDate.of(2020, 1, 1);
 		
 //	DEFAULT WHEEL PRICING

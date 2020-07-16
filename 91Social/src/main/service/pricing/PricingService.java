@@ -4,23 +4,27 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import main.model.ComponentPart;
 import main.service.Prices;
 
 public abstract class PricingService implements Pricing {
 
+	private final static Logger LOGGER = Logger.getLogger(ChainPricing.class.getName());
 	private Prices prices = new Prices();
 
 	//	Default percentage change is 5% every 6 months from pricing date
 	public Double calculatePricingBasedOnDate(Double price, LocalDate date) {
-
+		LOGGER.log(Level.INFO, "Setting percentage change and months duration change of price to 5% and 6 months respectively");
 		return calculatePricingBasedOnDate(price, date, 5.0, 6);
 	}
 
 	public Double calculatePricingBasedOnDate(Double price, LocalDate date, Double percentageChange, Integer durationInMonths) {
-
 		int months = getMonthDifference(getPrices().getPricingDate(), date);
+		LOGGER.log(Level.INFO, "There is difference of " + months +" months from the pricing date 2020-01-01.");
+		
 		Double finalPrice = caluculateRecursingPrice(price, months, percentageChange, durationInMonths);
 		return finalPrice;
 
@@ -136,7 +140,7 @@ public abstract class PricingService implements Pricing {
 		return caluculateRecursingPrice(priceRounded, monthsDifference - changeDurationInMonths, percentageChange, changeDurationInMonths);
 	}
 
-	private double round(Double value, int places) {
+	protected double round(Double value, int places) {
 		if (places < 0)
 			throw new IllegalArgumentException();
 
