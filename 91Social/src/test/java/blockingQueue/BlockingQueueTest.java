@@ -54,7 +54,6 @@ public class BlockingQueueTest {
 		Consumer consumer2 = new Consumer(sharedQueue, count);
 		Thread consumerThread2 = new Thread(consumer2);
 		
-
 		Producer producer3 = new Producer(sharedQueue, blockingQueueArguments, count);
 		Thread producerThread3 = new Thread(producer3);
 				
